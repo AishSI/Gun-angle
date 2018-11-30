@@ -2,20 +2,19 @@
 
 namespace AngryBirds
 {
-	public static class AngryBirdsTask
-	{
+    public static class AngryBirdsTask
+    {
+        const double g = 9.8;
+
         //  Ниже — это XML документация, её использует ваша среда разработки, 
         // чтобы показывать подсказки по использованию методов. 
         // Но писать её естественно не обязательно.
-        /// <param name="v">Начальная скорость</param>
-        /// <param name="distance">Расстояние до цели</param>
-        /// <returns>Угол прицеливания в радианах от 0 до Pi/2</returns>
-        
-        const double g = 9.8;
-
+        // <param name="v">Начальная скорость</param>
+        // <param name="distance">Расстояние до цели</param>
+        // <returns>Угол прицеливания в радианах от 0 до Pi/2</returns>
         public static double FindSightAngle(double v, double distance)
-		{               
-            return (Math.Asin((distance * g) / (v * v)))/2;
-		}
-	}
+        {
+            return (Math.Asin((distance * g) / (v * v))) / 2;
+        }
+    }
 }
